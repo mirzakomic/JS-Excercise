@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="wrapper">
+     <section>
+        <form onsubmit="adult();return false">
+            <label for="inputAlter">Alter eingeben</label>
+            <input type="number" id="input-alter">
+            <button type="submit">Überprüfen</button>
+            <div class="ergebnis1"></div>
+        </form>
+     </section>
+
+
+     <section>
+        <form onsubmit="weather();return false">
+            <label for="input-weather">Wetter Qaulität eingeben</label>
+            <input type="number" id="input-weather">
+            <button type="submit">Überprüfen</button>
+            <div class="">Das Wetter ist <span class="ergebnis2"></span></div>
+        </form>
+
+
+     </section>
+
+     <section id="special">
+        <form onsubmit="checkAirQuality(); return false">
+            <input id="air-q" min="0" max="150" value="0" step="10" type="range" oninput=" checkAirQuality();">
+            <div>Level of health concern: <span class="h-concern"></span></div>
+            <div>Level of health effect: <span class="h-effect"></span></div>
+        </form>
+     </section>
+
+     <section>
+        <form onsubmit="rechnen(); return false">
+        <label for="zufall">Zuffalszahl:</label>
+        <input type="number" name="zufall" id="zufallsnr">
+        <div>Ergebnis: <span class="diff"></span></div>
+        <button type="submit">Rechnen</button>
+        </article>
+    </form>
+
+    <section>
+        <h1 style="color: rgb(0, 119, 255)">JavaScript : if else statement</h1>
+<h3>
+      Hier prüfen wir, ob das Alter größer als 18 ist
+      oder nicht. Shisha rauchen darf man nur, wenn man volljährig ist.
+</h3>
+<hr />
+<form name="form1" action="#">
+      Geben Sie Ihr Alter ein<input type="number" name="text1" id="input" />
+      <input type="button" value="Alter" onclick="greaterThan()" />
+      <div class="shisha-ergebnis"></div>
+</form>
+
+    </section>
+
+    </div>
+     <script src="./assets/js/main.js"></script>
+</body>
+</html>
